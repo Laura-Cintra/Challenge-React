@@ -36,20 +36,10 @@ nav ul li a {
     max-width: 140px;
 }
 
-footer{
-    margin-top: 20px;
-    width: 100%;
-    background-color: #013351;
-    color: white;
-    text-align: center;
-}
-
-footer > p{
-    padding: 10px;
-}
 .Nav_Celular {
     display: none;
 }
+
 @media screen and (max-width: 670px) {
     nav ul li a {
         font-size: 1.1rem;
@@ -139,13 +129,11 @@ footer > p{
 `
 export const MainCont = styled.main `
 
-     
-    height: 100vh;
-
+    max-height: 125vh;
 
     form {
         max-width: 40%;
-        margin: 20px auto;
+        margin: 30px auto;
     }
 
     fieldset {
@@ -197,6 +185,7 @@ export const MainCont = styled.main `
         color: #0267A2;
         text-decoration: none;
     }
+
     @media screen and (max-width: 700px) {
         form {
             max-width: 70%;
@@ -210,7 +199,8 @@ export const MainCont = styled.main `
         } 
     }
 `
-export const Apresentacao = styled.div `
+
+export const DivApresentacao = styled.div `
     .texto_apresentacao {
         grid-area: apresentacao;
         background-color: #013351;
@@ -294,17 +284,18 @@ export const Apresentacao = styled.div `
     .mostrar {
         display: none;
     }
-`
-export const BemVindo = styled.main `
+`;
+
+export const MainRecepcao = styled.main `
     .container2 {
-    display: grid;
-    grid-template-columns: 55vw 45vw;
-    grid-template-areas:
-        'titulo_bemvindo titulo_bemvindo'
-        'subtitulo_bemvindo subtitulo_bemvindo'
-        'conteudo_descricao img_apresentacao';
-    margin-top: 10px;
-    margin-bottom: 50px;
+        display: grid;
+        grid-template-columns: 55vw 45vw;
+        grid-template-areas:
+            'titulo_bemvindo titulo_bemvindo'
+            'subtitulo_bemvindo subtitulo_bemvindo'
+            'conteudo_descricao img_apresentacao';
+        margin-top: 10px;
+        margin-bottom: 50px;
     }
 
     .titulo_bemvindo {
@@ -341,10 +332,6 @@ export const BemVindo = styled.main `
         margin-bottom: 15px;
     }
 
-    .botaoFerramnta {
-        grid-area: botaoFerramenta;
-    }
-
     .conteudo_descricao>p {
         font-size: 1.3rem;
         margin-bottom: 10%;
@@ -360,33 +347,29 @@ export const BemVindo = styled.main `
         border-radius: 5px;
     }
 
-
     .img_apresentacao {
         grid-area: img_apresentacao;
-        margin: 0;
-        padding: 0;
         margin: 0 10%;
     }
 
     .img_apresentacao img {
         width: 100%;
         height: auto;
-        margin: 0;
-        padding: 0;
     }
 
     span {
         color: #40B9FD;
     }
-`
+`;
+
 export const Motivo = styled.main `
 
-    .container3 {
+.container3 {
         display: grid;
-        grid-template-columns: 33, 3vw 33, 3vw 33, 3vw;
+        grid-template-columns: 33.3% 33.3% 33.3%;
         grid-template-areas:
             'titulo_motivo titulo_motivo titulo_motivo'
-            ' conteudo_motivo1 conteudo_motivo2 conteudo_motivo3 ';
+            'conteudo_motivo1 conteudo_motivo2 conteudo_motivo3';
         margin-bottom: 100px;
     }
 
@@ -396,15 +379,17 @@ export const Motivo = styled.main `
         display: flex;
         align-items: start;
         font-size: 1.4rem;
-    }
-
-    .titulo_motivo>h2 {
         background-color: #013351;
         font-weight: lighter;
-        width: 100%;
         text-align: center;
         margin-bottom: 40px;
         padding: 3%;
+    }
+
+    .conteudo_motivo1,
+    .conteudo_motivo2,
+    .conteudo_motivo3 {
+        text-align: center;
     }
 
     .conteudo_motivo1>h3,
@@ -428,24 +413,9 @@ export const Motivo = styled.main `
         margin: 20px auto;
         font-size: 1.1rem;
     }
+`;
 
-    .conteudo_motivo1 {
-        grid-area: conteudo_motivo1;
-        text-align: center;
-    }
-
-    .conteudo_motivo2 {
-        grid-area: conteudo_motivo2;
-        text-align: center;
-    }
-
-    .conteudo_motivo3 {
-        grid-area: conteudo_motivo3;
-        text-align: center;
-    }
-`
-export const Faq = styled.main `
-
+export const MainFaq = styled.main `
     .conteudoFAQ {
         width: 80%;
         margin: 0 auto;
@@ -453,19 +423,19 @@ export const Faq = styled.main `
     }
 
     .conteudoFAQ>h2 {
-
         font-size: 1.8em;
         text-align: center;
     }
 
     .duvidaFAQ {
         display: flex;
+        align-items: center;
+        margin-bottom: 15px;
     }
 
     .duvidaFAQ>h3 {
-        width: 98%;
         font-size: 1.2em;
-        margin-bottom: 1%;
+        flex: 1;
     }
 
     .duvidaFAQ>img {
@@ -480,28 +450,18 @@ export const Faq = styled.main `
         margin: 2em auto;
         border-radius: 4px;
     }
-
-    footer{
-        width: 100%;
-        background-color: #013351;
-        color: white;
-        text-align: center;
-    }
-
-    footer > p{
-        padding: 10px;
-    }
-`
+`;
 
 export const SobreNos = styled.div `
-    * {
-        text-align: center;
-    }
+    
+    text-align: center;
+
     header {
         color: #082737;
         text-align: center;
         margin-top: 20px;
     }
+    
     h1 {
         font-size: 2.4em;
         padding: 5px;
@@ -558,6 +518,7 @@ export const SobreNos = styled.div `
         color: #013351;
     }
 `
+
 export const ChatBotStyle = styled.div `
 
 .container {
@@ -791,3 +752,17 @@ p {
 }
 
 `
+
+export const StyleFooter = styled.footer `
+    width: 100%;
+    background-color: #013351;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    
+    p {
+        margin: 0;
+        padding: 10px;
+    }
+`;

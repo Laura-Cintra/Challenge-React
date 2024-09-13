@@ -17,3 +17,11 @@ export type FormFieldsetProps = {
     title: string;
     children: React.ReactNode;
 }
+
+export type ParticipanteProps = {
+    nome: string;
+    rm: string;
+    funcao: string;
+    foto: string;
+    github: string;
+}
