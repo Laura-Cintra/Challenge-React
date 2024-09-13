@@ -1,15 +1,9 @@
 import styled from "styled-components";
 
-export const DivNavs = styled.div `
+// css Menu.tsx
+export const DivNavs = styled.div`
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
-
-* {
-    padding: 0;
-    margin: 0;
-    font-family: "Nunito Sans", sans-serif;
-    font-style: normal;
-}
 
 nav {
     display: flex;
@@ -84,6 +78,8 @@ nav ul li a {
         align-items: center;
         background-color: #001A28;
         opacity: 1;
+        padding-top: 20px;
+        padding-bottom: 20px;
     }
 
     nav {
@@ -92,7 +88,7 @@ nav ul li a {
         height: 60px;
         margin-top: -10px;
     }
-
+    
     .nav-links li {
         margin: 20px 0;
     }
@@ -113,6 +109,7 @@ nav ul li a {
         justify-content: space-between;
         height: 60px;
         padding: 0;
+        margin-top: 10px;
     }
 
     .close-menu {
@@ -126,14 +123,18 @@ nav ul li a {
         cursor: pointer;
     }
 }
-`
-export const MainCont = styled.main `
+`;
+
+// css login.tsx e cadastro.tsx
+export const MainCont = styled.main`
 
     max-height: 125vh;
+    min-height: 80vh;
 
     form {
         max-width: 40%;
         margin: 30px auto;
+        margin-top: 50px;
     }
 
     fieldset {
@@ -198,13 +199,18 @@ export const MainCont = styled.main `
             margin: 20px auto;
         } 
     }
-`
+`;
 
-export const DivApresentacao = styled.div `
+// css Apresentacao.tsx
+export const DivApresentacao = styled.div`
+    
+    display: flex;
+    
     .texto_apresentacao {
-        grid-area: apresentacao;
+        width: 45%;
         background-color: #013351;
         color: white;
+        min-height: 90vh;
     }
 
     .texto_apresentacao>img {
@@ -213,45 +219,51 @@ export const DivApresentacao = styled.div `
     }
 
     .banner {
-        grid-area: banner;
+        width: 55%;
         display: flex;
-        justify-content: center;
+        justify-content:center;
         align-items: center;
     }
 
     .banner>img {
-        max-width: 75%;
-        max-height: 75%;
-        margin-left: 20%;
+        max-width: 85%;
+        max-height: 85%;
     }
 
     .h2 {
         background-color: #ABCEE4;
     }
+    p.esconder{
 
+        margin-top: 50px;
+
+    }
     .h2>h2 {
-        font-size: 3rem;
-        width: 40%;
-        margin: 20% 5% 10%;
+        font-size: 3.3rem;
+        max-width: 40%;
         color: #013351;
         justify-content: flex-start;
         padding-top: 40px;
+        margin-left: 20px;
         padding-bottom: 40px;
         font-weight: bolder;
         text-transform: uppercase;
+        margin-top: 160px;
     }
 
     .texto_apresentacao>h3 {
-        margin-left: 1em;
+        margin-left: 0.8em;
         margin-bottom: 3%;
         text-transform: uppercase;
         font-weight: 500;
-        font-size: 1.4em;
+        font-size: 1.6em;
     }
 
     hr {
         width: 55%;
         margin-bottom: 3%;
+        padding: 0;
+        margin: 0;
         margin-left: 1em;
     }
 
@@ -261,14 +273,15 @@ export const DivApresentacao = styled.div `
         padding: 0;
         margin: 0;
         margin-top: 100px;
-    }
+    }   
 
     .texto_apresentacao>p {
         font-size: 1.1em;
         margin-left: 1em;
         margin-bottom: 50px;
+        margin-right: 3px;
     }
-
+    
     .texto_apresentacao a {
         font-size: 1.1em;
         background-color: white;
@@ -284,19 +297,127 @@ export const DivApresentacao = styled.div `
     .mostrar {
         display: none;
     }
+
+    h3.esconder{
+        padding: 0;
+        margin: 20px;
+        margin-top: 80px;
+    }
+@media screen and (max-width: 950px) {
+
+    .h2 h2 {
+        font-size: 2rem;
+        margin-left: 0;
+        width: 15%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        padding-left: 15px;
+    } 
+
+}
+@media screen and (max-width: 580px) {
+
+    display: block;
+    .texto_apresentacao{
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .esconder{
+
+        display: none;
+
+    }
+    .mostrar{
+
+        display: block;
+
+    }
+    .omg {
+        text-align: center;
+        grid-area: textoalt;
+    }
+
+    .texto_apresentacao {
+        min-height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .texto_apresentacao>h2 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    h3 {
+        font-size: 1.6rem;
+        margin: 0;
+        padding: 0;
+    }
+
+    hr {
+        padding-bottom: 1px;
+        background-color: #000;
+        margin: 0 auto;
+        margin-top: 20px;
+        margin-bottom: 14px;
+    }
+
+    p {
+        margin: 0;
+        padding: 0;
+        font-size: 1.1rem;
+    }
+
+    .mostrar {
+        display: block;
+    }
+
+    #botaoSaibaMais {
+        font-size: 1.1em;
+        width: 200px;
+        margin: 0 auto;
+        margin-top: 30px;
+        padding: 10px;
+        background-color: #013351;
+        color: white;
+        text-decoration: none;
+        font-weight: bolder;
+        border-radius: 5px;
+    }
+    .banner{
+        margin-top: 30px;
+        width: 100%;
+        margin-bottom: 30px;
+
+    }
+    .banner>img {
+        max-width: 70%;
+        max-height: 70%;
+    }
+    p{
+        text-align: center;
+        width: 90%;
+        margin: 0 auto;
+
+    }
+}   
 `;
 
-export const MainRecepcao = styled.main `
-    .container2 {
+// css Recepcao.tsx
+export const MainRecepcao = styled.main`
+    
         display: grid;
-        grid-template-columns: 55vw 45vw;
+        grid-template-columns: 55vw 44.1vw;
         grid-template-areas:
             'titulo_bemvindo titulo_bemvindo'
             'subtitulo_bemvindo subtitulo_bemvindo'
             'conteudo_descricao img_apresentacao';
         margin-top: 10px;
         margin-bottom: 50px;
-    }
 
     .titulo_bemvindo {
         grid-area: titulo_bemvindo;
@@ -306,6 +427,7 @@ export const MainRecepcao = styled.main `
         justify-content: center;
         align-items: center;
         margin-top: 30px;
+        margin-right: 0;
         margin-bottom: 15px;
         padding: 5px;
     }
@@ -316,10 +438,12 @@ export const MainRecepcao = styled.main `
         font-size: 1.2em;
         margin-bottom: 40px;
         text-align: center;
+       
     }
-
     .subtitulo_bemvindo>h3 {
         font-weight: 200;
+        margin: 0;
+        padding: 0;
     }
 
     .conteudo_descricao {
@@ -360,28 +484,125 @@ export const MainRecepcao = styled.main `
     span {
         color: #40B9FD;
     }
-`;
 
-export const Motivo = styled.main `
+@media screen and (max-width: 1150px) {
 
-.container3 {
-        display: grid;
-        grid-template-columns: 33.3% 33.3% 33.3%;
-        grid-template-areas:
-            'titulo_motivo titulo_motivo titulo_motivo'
-            'conteudo_motivo1 conteudo_motivo2 conteudo_motivo3';
-        margin-bottom: 100px;
+    .titulo_bemvindo>h2 {
+        margin: 0;
+        font-size: 1.3em;
+        text-align: center;
     }
 
+    .subtitulo_bemvindo>h3 {
+        font-size: 1.4em;
+    }
+
+    .conteudo_descricao h4 {
+        text-align: justify;
+        font-size: 1.3rem;
+        margin: 0;
+        margin-top: 15px;
+    }
+
+    .conteudo_descricao p {
+        text-align: justify;
+        font-size: 1.2rem;
+        margin: 0;
+        margin-top: 15px;
+        margin-bottom: 40px;
+    }
+    .img_apresentacao{
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 750px) {
+
+        grid-template-columns: 100vw;
+        grid-template-areas:
+            'titulo_bemvindo'
+            'subtitulo_bemvindo'
+            'img_apresentacao'
+            'conteudo_descricao';
+    
+
+    .titulo_bemvindo {
+        align-items: center;
+        text-align: center;
+    }
+
+    .titulo_bemvindo>h2 {
+        margin: 0;
+        font-size: 2.2rem;
+        text-align: center;
+    }
+
+    .subtitulo_bemvindo {
+        padding: 5px;
+    }
+
+    .subtitulo_bemvindo>h3 {
+        font-size: 1.4rem;
+    }
+
+    .conteudo_descricao h4 {
+        text-align: center;
+        font-size: 1.4rem;
+        margin: 0;
+        margin-top: 15px;
+    }
+
+    .conteudo_descricao p {
+        text-align: justify;
+        font-size: 1.2rem;
+        margin: 0;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .center {
+        display: flex;
+        justify-content: center;
+    }
+    .img_apresentacao {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        margin-bottom: 10px;
+        padding: 0;
+    }
+    #img_apre {
+        width: 90%;
+        height: auto;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+}
+`;
+
+// css MotivosUso.tsx
+export const Motivo = styled.main`
+
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    grid-template-areas:
+        'titulo_motivo titulo_motivo titulo_motivo'
+        'conteudo_motivo1 conteudo_motivo2 conteudo_motivo3';
+    margin-bottom: 100px;
+    
     .titulo_motivo {
         grid-area: titulo_motivo;
         color: white;
         display: flex;
-        align-items: start;
+        align-items: center;
         font-size: 1.4rem;
         background-color: #013351;
         font-weight: lighter;
         text-align: center;
+        justify-content: center;
         margin-bottom: 40px;
         padding: 3%;
     }
@@ -390,20 +611,22 @@ export const Motivo = styled.main `
     .conteudo_motivo2,
     .conteudo_motivo3 {
         text-align: center;
+        margin-top: 30px;
     }
 
     .conteudo_motivo1>h3,
     .conteudo_motivo2>h3,
     .conteudo_motivo3>h3 {
         margin-top: 20px;
-        font-size: 1.5em;
+        font-size: 1.3em;
         color: #001A28;
     }
 
     .conteudo_motivo1>img,
     .conteudo_motivo2>img,
     .conteudo_motivo3>img {
-        width: 20vw;
+        width: 25vw;
+        max-height: 300px;
     }
 
     .conteudo_motivo1>p,
@@ -413,9 +636,62 @@ export const Motivo = styled.main `
         margin: 20px auto;
         font-size: 1.1rem;
     }
+
+@media screen and (max-width: 800px) {
+    .titulo_motivo {
+        font-size: 1rem;
+        justify-content: center;
+    }  
+}
+
+@media screen and (max-width: 590px) {
+
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-areas:
+        'titulo_motivo'
+        'conteudo_motivo1'
+        'conteudo_motivo2'
+        'conteudo_motivo3';
+
+    .titulo_motivo {
+        text-align: center;
+        }
+.conteudo_motivo1>img,
+.conteudo_motivo2>img,
+.conteudo_motivo3>img {
+    width: 65vw;
+    }
+}
+
+@media screen and (max-width: 380px) {
+
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-areas:
+        'titulo_motivo'
+        'conteudo_motivo1'
+        'conteudo_motivo2'
+        'conteudo_motivo3';
+
+.titulo_motivo {
+    grid-area: titulo_motivo;
+    color: white;
+    display: flex;
+    align-items: start;
+    font-size: 1rem;
+}
+.conteudo_motivo1>img,
+.conteudo_motivo2>img,
+.conteudo_motivo3>img {
+    width: 75vw;
+    height: auto;
+}
+}
 `;
 
-export const MainFaq = styled.main `
+// css Faq.tsx
+export const MainFaq = styled.main`
     .conteudoFAQ {
         width: 80%;
         margin: 0 auto;
@@ -452,10 +728,11 @@ export const MainFaq = styled.main `
     }
 `;
 
-export const SobreNosStyle = styled.div `
+// css sobre.tsx
+export const SobreNosStyle = styled.div`
     
     text-align: center;
-    height: 80vh;
+    height: 100vh;
 
     header {
         color: #082737;
@@ -522,8 +799,8 @@ export const SobreNosStyle = styled.div `
     }
 `
 
-
-export const ChatBotStyle = styled.div `
+// css chatbot.tsx
+export const ChatBotStyle = styled.div`
 
     display: grid;
     grid-template-columns:  33.3% 33.3% 33.3%;
@@ -750,12 +1027,13 @@ p {
     #logocarro {
         width: 180px;
         height: 46px;
-        margin-top: 5px;
+        margin-top: 7px;
     }
 }   
 `
 
-export const StyleFooter = styled.footer `
+// css Footer.tsx
+export const StyleFooter = styled.footer`
     width: 100%;
     background-color: #013351;
     color: white;

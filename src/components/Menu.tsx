@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom";
-import { DivNavs } from "../styled";
 import { useState } from 'react';
-import logoMenu from "../assets/img/Logo-nav.png"
+import { Link } from "react-router-dom";
+import logoMenu from "../assets/img/Logo-nav.png";
+import { DivNavs } from "../styled";
 
 export default function Menu() {
     const [menuActive, setMenuActive] = useState(false);
@@ -20,22 +20,22 @@ export default function Menu() {
                 <div className="Nav_Celular">
                     <nav>
                         <div className="menu-hamburger">
-                            <img id="logocarro" src={logoMenu} alt="logo" className="mostrar"/>
-                            <button 
-                                id="hamburger-menu" 
-                                className="hamburger" 
+                            <Link to="/"><img id="logocarro" src={logoMenu} alt="logo" className="mostrar" /></Link>
+                            <button
+                                id="hamburger-menu"
+                                className="hamburger"
                                 onClick={toggleMenu}
                             >
                                 ☰
                             </button>
                         </div>
-                        <ul 
-                            id="nav-links" 
+                        <ul
+                            id="nav-links"
                             className={`nav-links ${menuActive ? 'active' : ''}`}
                         >
-                            <button 
-                                id="close-menu" 
-                                className="close-menu" 
+                            <button
+                                id="close-menu"
+                                className="close-menu"
                                 onClick={closeMenu}
                             >
                                 ✖
@@ -50,7 +50,7 @@ export default function Menu() {
                 </div>
 
                 <nav className="NavHome">
-                    <img className="logo" src={logoMenu} alt="logo"/>
+                    <Link to="/"><img className="logo" src={logoMenu} alt="logo" /></Link>
                     <ul>
                         <li><Link to='/'>Home</Link></li>
                         <li><Link to='/chatbot'>ChatBot</Link></li>

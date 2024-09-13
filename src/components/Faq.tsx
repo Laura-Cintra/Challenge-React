@@ -1,5 +1,6 @@
-import { MainFaq } from '../styled';
+import expand_less from "../assets/img/expand_less.png";
 import expand_more from "../assets/img/expand_more.png";
+import { MainFaq } from '../styled';
 
 export default function Faq() {
     return (
@@ -9,7 +10,7 @@ export default function Faq() {
                 <section>
                     <div className="duvidaFAQ">
                         <h3>Dúvida 1</h3>
-                        <img src={expand_more} alt="seta para cima" />
+                        <img src={expand_less} alt="seta para cima" />
                     </div>
                     <p>Você pode agendar uma revisão facilmente através do nosso assistente virtual. Basta informar o tipo de serviço que você precisa e escolher um horário conveniente.</p>
                 </section>
