@@ -3,7 +3,7 @@ export type FormInputProps = {
     name: string;
     id: string;
     placeholder: string;
-    required?: boolean;
+    required?: boolean; // opcional
     maxLength?: number;
     pattern?: string;
 }
@@ -19,9 +19,9 @@ export type FormFieldsetProps = {
 }
 
 export type ParticipanteProps = {
+    foto: string;
     nome: string;
     rm: string;
     funcao: string;
-    foto: string;
-    github: string;
-}
+    githubUrl: string;
+  }
