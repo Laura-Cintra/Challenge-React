@@ -452,19 +452,21 @@ export const MainFaq = styled.main `
     }
 `;
 
-export const SobreNos = styled.div `
+export const SobreNosStyle = styled.div `
     
     text-align: center;
+    height: 80vh;
 
     header {
         color: #082737;
         text-align: center;
         margin-top: 20px;
     }
+
     
     h1 {
         font-size: 2.4em;
-        padding: 5px;
+        padding: 15px;
     }
 
     main {
@@ -481,7 +483,7 @@ export const SobreNos = styled.div `
 
     .logo-figma {
         max-width: 70px;
-        padding: 5px;
+        padding: 20px;
     }
 
     a {
@@ -491,6 +493,7 @@ export const SobreNos = styled.div `
     section {
         justify-content: space-between;
         margin: 5px 3em;
+        padding: 40px;
     }
 
     section>img {
@@ -518,25 +521,26 @@ export const SobreNos = styled.div `
         color: #013351;
     }
 `
+
+
 export const ChatBotStyle = styled.div `
 
-.container {
     display: grid;
-    grid-template-columns: 10vw 30vw 30vw 30vw;
+    grid-template-columns:  33.3% 33.3% 33.3%;
     grid-template-areas:
-        'sidebar   titulo           titulo           titulo'
-        'sidebar   subtitulo        subtitulo        subtitulo'
-        'sidebar   tituloPrincipal  tituloPrincipal  tituloPrincipal'
-        'sidebar   conteudo1        conteudo2        conteudo3'
-        'sidebar   chat             chat             chat'
+        'titulo           titulo           titulo'
+        'subtitulo        subtitulo        subtitulo'
+        'tituloPrincipal  tituloPrincipal  tituloPrincipal'
+        'conteudo1        conteudo2        conteudo3'
+        'chat             chat             chat'
     ;
-}
 
 .container1 {
     grid-area: sidebar;
     border-right: 5px solid #ABCEE4;
     background-color: #fff;
     height: 100vh;
+
 }
 
 .container1 nav {
@@ -604,7 +608,7 @@ input {
     font-size: 1.1em;
     border-radius: 42px;
     border: none;
-    margin-top: -1600px;
+    margin-bottom: 50px;
 }
 
 ::-webkit-input-placeholder {
@@ -636,6 +640,7 @@ h2 {
 h3 {
     text-align: center;
     color: #001A28;
+    margin-top: 30px;
     font-size: 2.5em;
 }
 
@@ -658,7 +663,7 @@ p {
     font-size: 1.6rem;
 }
 
-@media screen and (max-width: 895px) {
+@media screen and (max-width: 1000px) {
     h3 {
         font-size: 1.9rem;
     }
@@ -675,7 +680,6 @@ p {
 
 @media screen and (max-width: 590px) {
 
-    .container {
         display: grid;
         grid-template-columns: 50vw 50vw;
         grid-template-areas:
@@ -687,7 +691,7 @@ p {
             'conteudo3  conteudo3'
             'chat chat'
         ;
-    }
+    
     .container1 {
         display: none;
     }
@@ -748,8 +752,7 @@ p {
         height: 46px;
         margin-top: 5px;
     }
-}
-
+}   
 `
 
 export const StyleFooter = styled.footer `
