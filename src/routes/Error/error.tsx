@@ -4,7 +4,6 @@ export default function Error() {
         
         <>
         <h1>Erro 404 - Página não encontrada</h1>
-        
         </>
 
     );

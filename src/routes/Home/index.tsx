@@ -1,7 +1,7 @@
-import Apresentacao from '../../components/Apresentacao';
+import Apresentacao from '../../components/Apresentacao.tsx';
 import Recepcao from '../../components/Recepcao.tsx';
-import MotivosUso from '../../components/MotivosUso';
-import Faq from '../../components/Faq';
+import MotivosUso from '../../components/MotivosUso.tsx';
+import Faq from '../../components/Faq.tsx';
 
 export default function Home() {
     return (

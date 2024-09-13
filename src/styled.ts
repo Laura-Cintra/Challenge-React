@@ -140,12 +140,12 @@ footer > p{
 export const MainCont = styled.main `
 
      
-    max-height: 125vh;
+    height: 100vh;
 
 
     form {
         max-width: 40%;
-        margin: 30px auto;
+        margin: 20px auto;
     }
 
     fieldset {
@@ -210,7 +210,7 @@ export const MainCont = styled.main `
         } 
     }
 `
-export const DivApresentacao = styled.div `
+export const Apresentacao = styled.div `
     .texto_apresentacao {
         grid-area: apresentacao;
         background-color: #013351;
@@ -294,18 +294,17 @@ export const DivApresentacao = styled.div `
     .mostrar {
         display: none;
     }
-`;
-
-export const MainRecepcao = styled.main `
+`
+export const BemVindo = styled.main `
     .container2 {
-        display: grid;
-        grid-template-columns: 55vw 45vw;
-        grid-template-areas:
-            'titulo_bemvindo titulo_bemvindo'
-            'subtitulo_bemvindo subtitulo_bemvindo'
-            'conteudo_descricao img_apresentacao';
-        margin-top: 10px;
-        margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: 55vw 45vw;
+    grid-template-areas:
+        'titulo_bemvindo titulo_bemvindo'
+        'subtitulo_bemvindo subtitulo_bemvindo'
+        'conteudo_descricao img_apresentacao';
+    margin-top: 10px;
+    margin-bottom: 50px;
     }
 
     .titulo_bemvindo {
@@ -342,6 +341,10 @@ export const MainRecepcao = styled.main `
         margin-bottom: 15px;
     }
 
+    .botaoFerramnta {
+        grid-area: botaoFerramenta;
+    }
+
     .conteudo_descricao>p {
         font-size: 1.3rem;
         margin-bottom: 10%;
@@ -357,29 +360,33 @@ export const MainRecepcao = styled.main `
         border-radius: 5px;
     }
 
+
     .img_apresentacao {
         grid-area: img_apresentacao;
+        margin: 0;
+        padding: 0;
         margin: 0 10%;
     }
 
     .img_apresentacao img {
         width: 100%;
         height: auto;
+        margin: 0;
+        padding: 0;
     }
 
     span {
         color: #40B9FD;
     }
-`;
-
+`
 export const Motivo = styled.main `
 
-.container3 {
+    .container3 {
         display: grid;
-        grid-template-columns: 33.3% 33.3% 33.3%;
+        grid-template-columns: 33, 3vw 33, 3vw 33, 3vw;
         grid-template-areas:
             'titulo_motivo titulo_motivo titulo_motivo'
-            'conteudo_motivo1 conteudo_motivo2 conteudo_motivo3';
+            ' conteudo_motivo1 conteudo_motivo2 conteudo_motivo3 ';
         margin-bottom: 100px;
     }
 
@@ -389,17 +396,15 @@ export const Motivo = styled.main `
         display: flex;
         align-items: start;
         font-size: 1.4rem;
+    }
+
+    .titulo_motivo>h2 {
         background-color: #013351;
         font-weight: lighter;
+        width: 100%;
         text-align: center;
         margin-bottom: 40px;
         padding: 3%;
-    }
-
-    .conteudo_motivo1,
-    .conteudo_motivo2,
-    .conteudo_motivo3 {
-        text-align: center;
     }
 
     .conteudo_motivo1>h3,
@@ -423,29 +428,44 @@ export const Motivo = styled.main `
         margin: 20px auto;
         font-size: 1.1rem;
     }
-`;
 
-export const MainFaq = styled.main `
-.conteudoFAQ {
+    .conteudo_motivo1 {
+        grid-area: conteudo_motivo1;
+        text-align: center;
+    }
+
+    .conteudo_motivo2 {
+        grid-area: conteudo_motivo2;
+        text-align: center;
+    }
+
+    .conteudo_motivo3 {
+        grid-area: conteudo_motivo3;
+        text-align: center;
+    }
+`
+export const Faq = styled.main `
+
+    .conteudoFAQ {
         width: 80%;
         margin: 0 auto;
         margin-bottom: 40px;
     }
 
     .conteudoFAQ>h2 {
+
         font-size: 1.8em;
         text-align: center;
     }
 
     .duvidaFAQ {
         display: flex;
-        align-items: center;
-        margin-bottom: 15px;
     }
 
     .duvidaFAQ>h3 {
+        width: 98%;
         font-size: 1.2em;
-        flex: 1;
+        margin-bottom: 1%;
     }
 
     .duvidaFAQ>img {
@@ -460,7 +480,18 @@ export const MainFaq = styled.main `
         margin: 2em auto;
         border-radius: 4px;
     }
-`;
+
+    footer{
+        width: 100%;
+        background-color: #013351;
+        color: white;
+        text-align: center;
+    }
+
+    footer > p{
+        padding: 10px;
+    }
+`
 
 export const SobreNos = styled.div `
     * {
@@ -760,17 +791,3 @@ p {
 }
 
 `
-
-export const StyleFooter = styled.footer `
-    width: 100%;
-    background-color: #013351;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    margin-top: 20px;
-    
-    p {
-        margin: 0;
-        padding: 10px;
-    }
-`;
