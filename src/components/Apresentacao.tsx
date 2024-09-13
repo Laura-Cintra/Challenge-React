@@ -3,7 +3,7 @@ import vetor from "../assets/img/vetor.png";
 
 export default function Apresentacao() {
     return (
-        <DivApresentacao>
+        <DivApresentacao className="container">
             <section className="texto_apresentacao">
                 <h2 id="titulo" className="mostrar">Auto Atendimento</h2>
                 {/* <img id="logoprincipal" className="esconder" src="img/Logo-home.png" alt="logo" /> */}
